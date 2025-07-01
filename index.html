@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamPixel - AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon">🎨</span>
+            <span class="title">DreamPixel</span>
+        </div>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <button id="signInBtn">Sign In</button>
+        </nav>
+    </header>
+    <main>
+        <section id="generate-section">
+            <h1>Create Stunning Images with <span class="highlight">AI</span></h1>
+            <p class="subtitle">Transform your ideas into beautiful, unique images using cutting-edge artificial intelligence. Just describe what you want to see.</p>
+            <form id="imageForm">
+                <label for="prompt">Describe your image</label>
+                <textarea id="prompt" maxlength="500" placeholder="A serene mountain landscape at sunset with golden light reflecting on a crystal clear lake..." required></textarea>
+                <div id="prompt-chips" class="prompt-chips"></div>
+                <div class="selectors">
+                    <div>
+                        <label for="style">Style</label>
+                        <select id="style">
+                            <option>Digital Art</option>
+                            <option>Photorealistic</option>
+                            <option>Anime</option>
+                            <option>3D Render</option>
+                            <option>Watercolor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="aspect">Aspect Ratio</label>
+                        <select id="aspect">
+                            <option value="portrait">Portrait (9:16)</option>
+                            <option value="square">Square (1:1)</option>
+                            <option value="landscape">Landscape (16:9)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" id="generateBtn">Generate Image</button>
+                <!-- Progress bar will be injected here by JS -->
+            </form>
+            <div id="result"></div>
+        </section>
+        <section id="gallery-section">
+            <h2 class="gallery-title">Generated Images</h2>
+            <p class="gallery-subtitle">Your AI-created masterpieces appear here</p>
+            <div id="gallery"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
